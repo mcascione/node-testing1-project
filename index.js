@@ -26,7 +26,15 @@ function trimProperties(obj) {
  * trimPropertiesMutation({ name: '  jane  ' }) // returns the object mutated in place { name: 'jane' }
  */
 function trimPropertiesMutation(obj) {
-  // ✨ implement
+  let result = obj;
+  for (let key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      let property = obj[key].trim();
+      result[key] = property;
+    }
+  }
+  console.log(result)
+  return result;
 }
 
 /**
