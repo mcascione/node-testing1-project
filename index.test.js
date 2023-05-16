@@ -19,6 +19,7 @@ describe("[Exercise 1] trimProperties", () => {
     const expected = { foo: "foo", bar: "bar", baz: "baz" };
     const actual = utils.trimProperties(input);
     expect(actual).not.toBe(expected);
+    expect(actual).toBe(actual);
   });
 });
 
