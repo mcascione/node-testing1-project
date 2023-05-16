@@ -1,13 +1,13 @@
 const utils = require('./index')
 
 describe('testing the test', () => {
-  test.only('sum testing', () => {
+  test.skip('sum testing', () => {
     expect(1 + 3).toEqual(4);
   })
 })
 
 describe('[Exercise 1] trimProperties', () => {
-  test('[1] returns an object with the properties trimmed', () => {
+  test.only('[1] returns an object with the properties trimmed', () => {
     // EXAMPLE
     const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
     const expected = { foo: 'foo', bar: 'bar', baz: 'baz' }
